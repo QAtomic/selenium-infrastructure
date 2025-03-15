@@ -2,7 +2,7 @@ import { should } from "chai";
 import { sum } from "../../src/functions/sum.js";
 
 
-describe("Test Sum Function", function() {
+describe("Sum Function", function() {
     let maths = [
         {
             testName : "Two Plus Three",

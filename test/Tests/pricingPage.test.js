@@ -4,7 +4,7 @@ import { sleep } from "../testUtils/sleep.js"
 
 
 
-describe("DevCraft Complete Pricing", function() {
+describe("Pricing Page", function() {
     let driver;
 
     this.beforeEach(async function() {

@@ -4,7 +4,7 @@ import { sleep } from "../testUtils/sleep.js"
 
 
 
-describe("Search", function() {
+describe("Search Page", function() {
     let driver;
 
     this.beforeEach(async function() {
@@ -22,7 +22,7 @@ describe("Search", function() {
     });
 
 
-    it("Search", async function() {
+    it("Search Automation", async function() {
         await driver.findElement(By.xpath("//a[@title='Search']")).click();
 
         await driver.findElement(By.xpath("//tk-site-search//input")).sendKeys("Automation Tests");

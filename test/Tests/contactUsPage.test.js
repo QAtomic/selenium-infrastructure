@@ -7,6 +7,7 @@ import { sleep } from "../testUtils/sleep.js"
 describe("Contact Us Form", function() {
     let users = [
         {
+            testCase : "Drew Form",
             helpYou : "Product questions",
             productInterst : "Test Studio",   
             firstName : "Drew",
@@ -19,6 +20,7 @@ describe("Contact Us Form", function() {
             comment : "This is a Selenium Test"
         }, 
         {
+            testCase : "Mike Form",
             helpYou : "Account activation",
             productInterst : "UI for Vue",  
             firstName : "Mike",
@@ -33,7 +35,7 @@ describe("Contact Us Form", function() {
     ]
 
     users.forEach(user => {
-        it("Contact Us Form", async function() {
+        it(user.testCase, async function() {
             let driver;
 
             try {
