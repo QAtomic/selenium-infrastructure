@@ -1,4 +1,4 @@
-import { By, Builder, Select } from "selenium-webdriver";
+import { By } from "selenium-webdriver";
 import { should } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
@@ -11,7 +11,7 @@ describe("Search Page", function() {
     beforeEach(async function() {
         should();
 
-        driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
+        driver = await (new DriverManager()).getDriver("https://www.telerik.com/search");
 
         await sleep(1000);
     });

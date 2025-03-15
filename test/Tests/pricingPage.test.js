@@ -1,4 +1,4 @@
-import { By, Builder, Select } from "selenium-webdriver";
+import { By } from "selenium-webdriver";
 import { should } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
@@ -11,7 +11,7 @@ describe("Pricing Page", function() {
     beforeEach(async function() {
         should();
 
-        driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
+        driver = await (new DriverManager()).getDriver("https://www.telerik.com/purchase.aspx");
 
         await sleep(1000);
     });
@@ -21,9 +21,7 @@ describe("Pricing Page", function() {
     });
 
 
-    it("DevCraft Complete Pricing", async function() {
-        await driver.findElement(By.xpath("//li[@class='TK-Menu-Item']/a[contains(text(),'Pricing')]")).click();
-        
+    it("DevCraft Complete Pricing", async function() {      
         let t = await driver.findElement(By.xpath("//div[@class='Purchase-title']/*[contains(text(),'DevCraft Complete')]")).getText().then(function(value) {
             return value
         });

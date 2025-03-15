@@ -42,11 +42,9 @@ describe("Contact Us Form", function() {
             try {
                 should();
     
-                driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
+                driver = await (new DriverManager()).getDriver("https://www.telerik.com/contact");
     
                 await sleep(1000);
-    
-                await driver.findElement(By.xpath("//a[@title='Contact Us']")).click();
     
                 let dropdownHelpYou = await driver.findElement(By.id("Dropdown-1"));
                 let selectHelpYou = await new Select(dropdownHelpYou);
@@ -76,7 +74,7 @@ describe("Contact Us Form", function() {
     
                 await driver.findElement(By.id("Textarea-1")).sendKeys(user.comment);
     
-                await sleep(5000);
+                await sleep(3000);
             } finally {};
         });
     });
