@@ -1,6 +1,6 @@
 import { By, Builder, Select } from "selenium-webdriver";
 import { should } from "chai";
-import { sleep } from "../testUtils/sleep.js"
+import { sleep } from "../utils/sleep.js"
 import { DriverManager } from "../managers/driverManager.js";
 
 
