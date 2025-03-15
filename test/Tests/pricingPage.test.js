@@ -22,11 +22,13 @@ describe("Pricing Page", function() {
 
 
     it("DevCraft Complete Pricing", async function() {      
-        let t = await driver.findElement(By.xpath("//div[@class='Purchase-title']/*[contains(text(),'DevCraft Complete')]")).getText().then(function(value) {
+        let price = await driver.findElement(By.xpath("//div[@class='Purchase-title']/*[contains(text(),'DevCraft Complete')]/../..//div[@class='Purchase-price']")).getText().then(function(value) {
             return value
         });
+
+        price = price.replace(/[^0-9]/g, '').trim();
         
-        t.should.equal("DevCraft Complete");
+        price.should.equal("1299");
         
         await sleep(3000);
     });
