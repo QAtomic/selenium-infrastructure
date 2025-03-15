@@ -1,6 +1,7 @@
 import { By, Builder, Select } from "selenium-webdriver";
 import { should } from "chai";
 import { sleep } from "../testUtils/sleep.js"
+import { DriverManager } from "../managers/driverManager.js";
 
 
 
@@ -10,9 +11,7 @@ describe("Search Page", function() {
     this.beforeEach(async function() {
         should();
 
-        driver = await new Builder().forBrowser("chrome").build();
-        await driver.manage().window().maximize();
-        await driver.get("https://www.telerik.com/");
+        driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
 
         await sleep(1000);
     });

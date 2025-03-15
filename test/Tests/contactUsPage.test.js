@@ -1,6 +1,7 @@
 import { By, Builder, Select } from "selenium-webdriver";
 import { should } from "chai";
-import { sleep } from "../testUtils/sleep.js"
+import { sleep } from "../testUtils/sleep.js";
+import { DriverManager } from "../managers/driverManager.js";
 
 
 
@@ -33,17 +34,17 @@ describe("Contact Us Form", function() {
             comment : "This is a Javascript Test"
         }
     ]
+    
+    let driver;
 
     users.forEach(user => {
         it(user.testCase, async function() {
-            let driver;
+            
 
             try {
                 should();
     
-                driver = await new Builder().forBrowser("chrome").build();
-                await driver.manage().window().maximize();
-                await driver.get("https://www.telerik.com/");
+                driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
     
                 await sleep(1000);
     
@@ -78,11 +79,13 @@ describe("Contact Us Form", function() {
                 await driver.findElement(By.id("Textarea-1")).sendKeys(user.comment);
     
                 await sleep(5000);
-            } finally {
-                await driver.quit();
-            }
+            } finally {};
         });
-    })
+    });
+
+    after(async function() {
+        await driver.quit();
+    });
 
 
 });
