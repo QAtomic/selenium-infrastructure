@@ -8,7 +8,7 @@ import { DriverManager } from "../managers/driverManager.js";
 describe("Search Page", function() {
     let driver;
 
-    this.beforeEach(async function() {
+    beforeEach(async function() {
         should();
 
         driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
@@ -16,7 +16,7 @@ describe("Search Page", function() {
         await sleep(1000);
     });
 
-    this.afterEach(async function() {
+    after(async function() {
         await driver.quit();
     });
 
