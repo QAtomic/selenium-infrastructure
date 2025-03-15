@@ -39,8 +39,6 @@ describe("Contact Us Form", function() {
 
     users.forEach(user => {
         it(user.testCase, async function() {
-            
-
             try {
                 should();
     
