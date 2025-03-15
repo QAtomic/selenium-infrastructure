@@ -6,6 +6,8 @@ import { DriverManager } from "../managers/driverManager.js";
 
 
 describe("Contact Us Form", function() {
+    let driver;
+
     let users = [
         {
             testCase : "Drew Form",
@@ -34,8 +36,6 @@ describe("Contact Us Form", function() {
             comment : "This is a Javascript Test"
         }
     ]
-    
-    let driver;
 
     users.forEach(user => {
         it(user.testCase, async function() {
