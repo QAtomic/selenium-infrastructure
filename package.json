@@ -8,11 +8,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "mocha --no-timeouts --parallel test/tests/*.js"
+    "test": "mocha --no-timeouts --parallel test/tests/*.js --reporter mochawesome --require mochawesome/register --reporter-options reportDir=test/reports/lastRun,reportFilename=Test_Report"
   },
   "dependencies": {
     "chai": "^5.2.0",
     "mocha": "^11.1.0",
+    "mochawesome": "^7.1.3",
     "next": "15.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

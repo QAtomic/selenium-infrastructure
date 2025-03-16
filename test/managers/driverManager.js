@@ -1,11 +1,8 @@
-import { By, Builder, Select } from "selenium-webdriver";
+import { Builder } from "selenium-webdriver";
 
 let driver;
 
 export class DriverManager {
-    constructor() {
-
-    }
 
     async getDriver(url) {
         if (!driver) {

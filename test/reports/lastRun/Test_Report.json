@@ -1,0 +1,454 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-03-16T22:08:06.782Z",
+    "end": "2025-03-16T22:08:21.551Z",
+    "duration": 14769,
+    "testsRegistered": 8,
+    "passPercent": 87.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3aa89618-aaa4-4500-ae20-2b738c366a83",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17a8ab0a-8719-4b59-8333-1f1caa0a38d3",
+          "title": "Sum Function",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\tests\\sumFunction.test.js",
+          "file": "\\test\\tests\\sumFunction.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Two Plus Three",
+              "fullTitle": "Sum Function Two Plus Three",
+              "timedOut": null,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "should();\nsum(math.a, math.b).should.equal(math.result);",
+              "err": {},
+              "uuid": "d9e10734-b9e3-45cb-a971-6e58e8e638a2",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Four Plus Five",
+              "fullTitle": "Sum Function Four Plus Five",
+              "timedOut": null,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "should();\nsum(math.a, math.b).should.equal(math.result);",
+              "err": {},
+              "uuid": "5ee9cf2c-7cc1-47cc-8d91-4dfa26d3cbd4",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Six Plus Seven (Forced Error)",
+              "fullTitle": "Sum Function Six Plus Seven (Forced Error)",
+              "timedOut": null,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "should();\nsum(math.a, math.b).should.equal(math.result);",
+              "err": {
+                "message": "AssertionError: expected 13 to equal 12",
+                "estack": "AssertionError: expected 13 to equal 12\n    at Context.<anonymous> (file:///C:/Users/Drew/Documents/VScode-workspace/selenium-infrastructure/test/tests/sumFunction.test.js:31:40)\n    at process.processImmediate (node:internal/timers:478:21)",
+                "diff": "- 13\n+ 12\n"
+              },
+              "uuid": "af52c1de-7aab-4db4-9b6a-e81511f1f074",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d9e10734-b9e3-45cb-a971-6e58e8e638a2",
+            "5ee9cf2c-7cc1-47cc-8d91-4dfa26d3cbd4"
+          ],
+          "failures": [
+            "af52c1de-7aab-4db4-9b6a-e81511f1f074"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "143aac25-9aeb-4e12-9d1d-6283bc9fa0f0",
+          "title": "Home Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\tests\\homePage.test.js",
+          "file": "\\test\\tests\\homePage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Home Page\"",
+              "fullTitle": "Home Page \"before each\" hook in \"Home Page\"",
+              "timedOut": null,
+              "duration": 1,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "should();\n//this.driver = await (new DriverManager()).getDriver(\"https://www.telerik.com/\");\n//await sleep(1000);",
+              "err": {},
+              "uuid": "1a8d3464-e45c-4e5e-ac2c-912fc6c12a6d",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Home Page\"",
+              "fullTitle": "Home Page \"after each\" hook in \"Home Page\"",
+              "timedOut": null,
+              "duration": 60,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await this.driver.quit();",
+              "err": {},
+              "uuid": "a5899eeb-526e-4d33-8ad7-1df3976b41ee",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Contact Us Link",
+              "fullTitle": "Home Page Contact Us Link",
+              "timedOut": null,
+              "duration": 6317,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//driver = await (new DriverManager()).getDriver(\"https://www.telerik.com/\");\nlet url = \"https://www.telerik.com/\";\nthis.driver = await new Builder().forBrowser(\"chrome\").build();\nawait this.driver.manage().window().maximize();\nawait this.driver.get(url);\nawait sleep(1000);\nawait this.driver.findElement(By.xpath(\"//a[@title='Contact Us']\")).click();\nlet contactUsPageTitle = await this.driver.getTitle();\ncontactUsPageTitle.should.equal(\"Contact the Telerik Team | Progress Telerik\");\nexpect(contactUsPageTitle).to.equal(\"Contact the Telerik Team | Progress Telerik\");",
+              "err": {},
+              "uuid": "7c4f3a51-950e-44cd-92d2-5f9610b2e69d",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7c4f3a51-950e-44cd-92d2-5f9610b2e69d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6317,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "78732086-36c3-4416-a0ac-fe969c40b36c",
+          "title": "Pricing Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\tests\\pricingPage.test.js",
+          "file": "\\test\\tests\\pricingPage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Pricing Page\"",
+              "fullTitle": "Pricing Page \"before each\" hook in \"Pricing Page\"",
+              "timedOut": null,
+              "duration": 4622,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "should();\ndriver = await (new DriverManager()).getDriver(\"https://www.telerik.com/purchase.aspx\");\nawait sleep(1000);",
+              "err": {},
+              "uuid": "a48f16b9-47b1-4dcf-94ec-9b54ea3ad687",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Pricing Page\"",
+              "fullTitle": "Pricing Page \"after all\" hook in \"Pricing Page\"",
+              "timedOut": null,
+              "duration": 75,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "b36cef70-997f-4532-991b-5793bdb97964",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "DevCraft Complete Pricing",
+              "fullTitle": "Pricing Page DevCraft Complete Pricing",
+              "timedOut": null,
+              "duration": 3491,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let price = await driver.findElement(By.xpath(\"//div[@class='Purchase-title']/*[contains(text(),'DevCraft Complete')]/../..//div[@class='Purchase-price']\")).getText().then(function(value) {\n    return value\n});\nprice = price.replace(/[^0-9]/g, '').trim();\n\nprice.should.equal(\"1299\");\n\nawait sleep(3000);",
+              "err": {},
+              "uuid": "d77ccf43-9c15-4844-9acb-285cd6858428",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d77ccf43-9c15-4844-9acb-285cd6858428"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3491,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "f97e3dce-690f-4b41-bce9-d7b8ca543a8b",
+          "title": "Search Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\tests\\searchPage.test.js",
+          "file": "\\test\\tests\\searchPage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Search Page\"",
+              "fullTitle": "Search Page \"before each\" hook in \"Search Page\"",
+              "timedOut": null,
+              "duration": 6164,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "should();\ndriver = await (new DriverManager()).getDriver(\"https://www.telerik.com/search\");\nawait sleep(1000);",
+              "err": {},
+              "uuid": "0cba8ccc-b291-47fb-96b7-db04bd94bbed",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Search Page\"",
+              "fullTitle": "Search Page \"after all\" hook in \"Search Page\"",
+              "timedOut": null,
+              "duration": 94,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "9b818716-90a5-41cb-ad56-3725ce3c35cb",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Search Automation",
+              "fullTitle": "Search Page Search Automation",
+              "timedOut": null,
+              "duration": 5296,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.findElement(By.xpath(\"//a[@title='Search']\")).click();\nawait driver.findElement(By.xpath(\"//tk-site-search//input\")).sendKeys(\"Automation Tests\");\nawait driver.findElement(By.xpath(\"//tk-site-search//button\")).click();\nawait sleep(1000);\nlet firstSearchResultText = await driver.findElement(By.xpath(\"//ul[@class='TK-Search-Results-List']/li[1]//a\")).getText().then(function(value) {\n    return value\n});\nfirstSearchResultText.should.have.string(\"Avoiding Brittle Automation\");\nawait sleep(3000);",
+              "err": {},
+              "uuid": "7689aee4-7bc9-42df-a88a-2480cdf7ff88",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7689aee4-7bc9-42df-a88a-2480cdf7ff88"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5296,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "56bc35f1-3507-4652-8514-1ebf6693330a",
+          "title": "Contact Us Form",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\tests\\contactUsPage.test.js",
+          "file": "\\test\\tests\\contactUsPage.test.js",
+          "beforeHooks": [],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Contact Us Form\"",
+              "fullTitle": "Contact Us Form \"after all\" hook in \"Contact Us Form\"",
+              "timedOut": null,
+              "duration": 61,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await driver.quit();",
+              "err": {},
+              "uuid": "5aae5feb-33b8-4602-81e8-3bb125e96591",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Drew Form",
+              "fullTitle": "Contact Us Form Drew Form",
+              "timedOut": null,
+              "duration": 9546,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    should();\n    \n    driver = await (new DriverManager()).getDriver(\"https://www.telerik.com/contact\");\n    \n    await sleep(1000);\n    \n    let dropdownHelpYou = await driver.findElement(By.id(\"Dropdown-1\"));\n    let selectHelpYou = await new Select(dropdownHelpYou);\n    await selectHelpYou.selectByValue(user.helpYou);\n    \n    let dropdownProductInterest = await driver.findElement(By.id(\"Dropdown-2\"));\n    let selectProductInterest = await new Select(dropdownProductInterest);\n    await selectProductInterest.selectByValue(user.productInterst);\n    \n    await driver.findElement(By.id(\"Textbox-1\")).sendKeys(user.firstName);\n    \n    await driver.findElement(By.id(\"Textbox-2\")).sendKeys(user.lastName);\n    \n    await driver.findElement(By.id(\"Email-1\")).sendKeys(user.email);\n    \n    await driver.findElement(By.id(\"Textbox-3\")).sendKeys(user.company);\n    \n    let dropdownCountry = await driver.findElement(By.id(\"Country-1\"));\n    let selectCountry = await new Select(dropdownCountry);\n    await selectCountry.selectByValue(user.country);\n    \n    let dropdownState = await driver.findElement(By.id(\"State-1\"));\n    let selectState = await new Select(dropdownState);\n    await selectState.selectByValue(user.state);\n    \n    await driver.findElement(By.id(\"Textbox-4\")).sendKeys(user.phone);\n    \n    await driver.findElement(By.id(\"Textarea-1\")).sendKeys(user.comment);\n    \n    await sleep(3000);\n} finally {};",
+              "err": {},
+              "uuid": "90220ceb-7a6a-48ee-ad86-82aa1664b883",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mike Form",
+              "fullTitle": "Contact Us Form Mike Form",
+              "timedOut": null,
+              "duration": 4573,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    should();\n    \n    driver = await (new DriverManager()).getDriver(\"https://www.telerik.com/contact\");\n    \n    await sleep(1000);\n    \n    let dropdownHelpYou = await driver.findElement(By.id(\"Dropdown-1\"));\n    let selectHelpYou = await new Select(dropdownHelpYou);\n    await selectHelpYou.selectByValue(user.helpYou);\n    \n    let dropdownProductInterest = await driver.findElement(By.id(\"Dropdown-2\"));\n    let selectProductInterest = await new Select(dropdownProductInterest);\n    await selectProductInterest.selectByValue(user.productInterst);\n    \n    await driver.findElement(By.id(\"Textbox-1\")).sendKeys(user.firstName);\n    \n    await driver.findElement(By.id(\"Textbox-2\")).sendKeys(user.lastName);\n    \n    await driver.findElement(By.id(\"Email-1\")).sendKeys(user.email);\n    \n    await driver.findElement(By.id(\"Textbox-3\")).sendKeys(user.company);\n    \n    let dropdownCountry = await driver.findElement(By.id(\"Country-1\"));\n    let selectCountry = await new Select(dropdownCountry);\n    await selectCountry.selectByValue(user.country);\n    \n    let dropdownState = await driver.findElement(By.id(\"State-1\"));\n    let selectState = await new Select(dropdownState);\n    await selectState.selectByValue(user.state);\n    \n    await driver.findElement(By.id(\"Textbox-4\")).sendKeys(user.phone);\n    \n    await driver.findElement(By.id(\"Textarea-1\")).sendKeys(user.comment);\n    \n    await sleep(3000);\n} finally {};",
+              "err": {},
+              "uuid": "52ba731e-9cc0-41bd-ada6-a194fbb0af1c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "90220ceb-7a6a-48ee-ad86-82aa1664b883",
+            "52ba731e-9cc0-41bd-ada6-a194fbb0af1c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14119,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "Test_Report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test/reports/lastRun",
+        "reportFilename": "Test_Report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
