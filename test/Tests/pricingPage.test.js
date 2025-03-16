@@ -13,7 +13,7 @@ describe("Pricing Page", function() {
         this.driver = await (new DriverManager()).getDriver();
         this.pricingPage = new PricingPage(this.driver);
 
-        this.pricingPage.open();
+        await this.pricingPage.open();
 
         await sleep(1000);
     });
@@ -23,17 +23,8 @@ describe("Pricing Page", function() {
     });
 
 
-    it("DevCraft Complete Pricing", async function() {      
-        let price = await this.driver.findElement(By.xpath("//div[@class='Purchase-title']/*[contains(text(),'DevCraft Complete')]/../..//div[@class='Purchase-price']")).getText().then(function(value) {
-            return value
-        });
-
-        price = price.replace(/[^0-9]/g, '').trim();
-        
-        price.should.equal("1299");
-        expect(price).to.equal("1299");
-        
-        await sleep(3000);
+    it("DevCraft Complete Pricing", async function() {  
+        await this.pricingPage.verifyProductPrice("DevCraft Complete", "1299");
     });
     
 
