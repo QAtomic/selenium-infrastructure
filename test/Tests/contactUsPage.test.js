@@ -2,6 +2,7 @@ import { By, Select } from "selenium-webdriver";
 import { should } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
+import { ContactUsPage } from "../pages/contactUsPage.js";
 
 
 
@@ -41,39 +42,13 @@ describe("Contact Us Form", function() {
             try {
                 should();
     
-                this.driver = await (new DriverManager()).getDriver("https://www.telerik.com/contact");
+                this.driver = await (new DriverManager()).getDriver();
+                this.contactUsPage = new ContactUsPage(this.driver);
+                await this.contactUsPage.open();
     
                 await sleep(1000);
     
-                let dropdownHelpYou = await this.driver.findElement(By.id("Dropdown-1"));
-                let selectHelpYou = await new Select(dropdownHelpYou);
-                await selectHelpYou.selectByValue(user.helpYou);
-    
-                let dropdownProductInterest = await this.driver.findElement(By.id("Dropdown-2"));
-                let selectProductInterest = await new Select(dropdownProductInterest);
-                await selectProductInterest.selectByValue(user.productInterst);
-    
-                await this.driver.findElement(By.id("Textbox-1")).sendKeys(user.firstName);
-    
-                await this.driver.findElement(By.id("Textbox-2")).sendKeys(user.lastName);
-    
-                await this.driver.findElement(By.id("Email-1")).sendKeys(user.email);
-    
-                await this.driver.findElement(By.id("Textbox-3")).sendKeys(user.company);
-    
-                let dropdownCountry = await this.driver.findElement(By.id("Country-1"));
-                let selectCountry = await new Select(dropdownCountry);
-                await selectCountry.selectByValue(user.country);
-    
-                let dropdownState = await this.driver.findElement(By.id("State-1"));
-                let selectState = await new Select(dropdownState);
-                await selectState.selectByValue(user.state);
-    
-                await this.driver.findElement(By.id("Textbox-4")).sendKeys(user.phone);
-    
-                await this.driver.findElement(By.id("Textarea-1")).sendKeys(user.comment);
-    
-                await sleep(3000);
+                await this.contactUsPage.fillGetInTouchForm(user);
             } finally {};
         });
     });

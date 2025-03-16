@@ -2,14 +2,24 @@ import { By } from "selenium-webdriver";
 import { should, expect } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
+import { HomePage } from "../pages/homePage.js";
+import { ContactUsPage } from "../pages/contactUsPage.js";
+import { PricingPage } from "../pages/pricingPage.js";
+import { SearchPage } from "../pages/searchPage.js";
 
 describe("Home Page", function() {
 
     beforeEach(async function() {
         should();
-        expect();
 
-        this.driver = await (new DriverManager()).getDriver("https://www.telerik.com/");
+        this.driver = await (new DriverManager()).getDriver();
+        
+        this.homePage = new HomePage(this.driver);
+        this.contactUsPage = new ContactUsPage(this.driver);
+        this.pricingPage = new PricingPage(this.driver);
+        this.searchPage = new SearchPage(this.driver);
+
+        await this.homePage.open();
 
         await sleep(1000);
     });
@@ -20,32 +30,23 @@ describe("Home Page", function() {
 
 
     it("Contact Us Link", async function() {
-        await this.driver.findElement(By.xpath("//a[@title='Contact Us']")).click();
+        await this.homePage.clickContactUsLink();
 
-        let contactUsPageTitle = await this.driver.getTitle();
-
-        contactUsPageTitle.should.equal("Contact the Telerik Team | Progress Telerik");
-        expect(contactUsPageTitle).to.equal("Contact the Telerik Team | Progress Telerik");
+        await this.contactUsPage.verifyPageTitle();
     });
 
     
     it("Search Link", async function() {
-        await this.driver.findElement(By.xpath("//a[@title='Search']")).click();
+        await this.homePage.clickSearchLink();
 
-        let searchPageTitle = await this.driver.getTitle();
-
-        searchPageTitle.should.equal("Search Results");
-        expect(searchPageTitle).to.equal("Search Results");
+        await this.searchPage.verifyPageTitle();
     });
 
 
     it("Pricing Link", async function() {
-        await this.driver.findElement(By.xpath("//li[@class='TK-Menu-Item']/a[contains(text(),'Pricing')]")).click();
+        await this.homePage.clickPricingLink();
 
-        let pricingPageTitle = await this.driver.getTitle();
-
-        pricingPageTitle.should.equal("Purchase Telerik Software Development Tools");
-        expect(pricingPageTitle).to.equal("Purchase Telerik Software Development Tools");
+        await this.pricingPage.verifyPageTitle();
     });
     
 });

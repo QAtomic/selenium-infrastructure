@@ -12,5 +12,13 @@ export class DriverManager {
         }
         return driver;
     };
+
+    async getDriver() {
+        if (!driver) {
+            driver = await new Builder().forBrowser("chrome").build();
+            await driver.manage().window().maximize();
+        }
+        return driver;
+    };
 }
 
