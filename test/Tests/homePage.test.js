@@ -10,8 +10,6 @@ import { SearchPage } from "../pages/searchPage.js";
 describe("Home Page", function() {
 
     beforeEach(async function() {
-        should();
-
         this.driver = await (new DriverManager()).getDriver();
         
         this.homePage = new HomePage(this.driver);

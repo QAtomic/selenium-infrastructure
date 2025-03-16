@@ -9,8 +9,6 @@ import { SearchPage } from "../pages/searchPage.js";
 describe("Search Page", function() {
 
     beforeEach(async function() {
-        should();
-
         this.driver = await (new DriverManager()).getDriver();
         this.searchPage = new SearchPage(this.driver);
 

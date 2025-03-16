@@ -40,8 +40,6 @@ describe("Contact Us Form", function() {
     users.forEach(user => {
         it(user.testCase, async function() {
             try {
-                should();
-    
                 this.driver = await (new DriverManager()).getDriver();
                 this.contactUsPage = new ContactUsPage(this.driver);
                 await this.contactUsPage.open();
