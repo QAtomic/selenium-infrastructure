@@ -1,11 +1,9 @@
 import { By } from "selenium-webdriver";
-import { should, expect } from "chai";
+import { expect } from "chai";
 import { sleep } from "../utils/sleep.js";
 
 export class SearchPage {
     constructor(driver) {
-        should();
-
         this.driver = driver;
         this.url = "https://www.telerik.com/search";
 
@@ -22,7 +20,6 @@ export class SearchPage {
     async verifyPageTitle() {
         let searchPageTitle = await this.driver.getTitle();
 
-        searchPageTitle.should.equal("Search Results");
         expect(searchPageTitle).to.equal("Search Results");
     }
 
@@ -40,7 +37,6 @@ export class SearchPage {
             return value
         });
         
-        firstSearchResultText.should.have.string(str);
         expect(firstSearchResultText).to.have.string(str);
         
         await sleep(2000);

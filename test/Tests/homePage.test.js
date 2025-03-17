@@ -1,5 +1,3 @@
-import { By } from "selenium-webdriver";
-import { should, expect } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
 import { HomePage } from "../pages/homePage.js";

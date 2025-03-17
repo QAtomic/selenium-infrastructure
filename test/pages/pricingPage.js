@@ -1,11 +1,9 @@
 import { By } from "selenium-webdriver";
-import { should, expect } from "chai";
+import { expect } from "chai";
 import { sleep } from "../utils/sleep.js";
 
 export class PricingPage {
     constructor(driver) {
-        should();
-
         this.driver = driver;
         this.url = "https://www.telerik.com/purchase.aspx";
 
@@ -18,7 +16,6 @@ export class PricingPage {
     async verifyPageTitle() {
         let pricingPageTitle = await this.driver.getTitle();
 
-        pricingPageTitle.should.equal("Purchase Telerik Software Development Tools");
         expect(pricingPageTitle).to.equal("Purchase Telerik Software Development Tools");
     }
 
@@ -29,7 +26,6 @@ export class PricingPage {
         
         displayedPrice = displayedPrice.replace(/[^0-9]/g, '').trim();
                 
-        displayedPrice.should.equal(price);
         expect(displayedPrice).to.equal(price);
                 
         await sleep(3000);

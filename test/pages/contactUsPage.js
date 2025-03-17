@@ -1,11 +1,9 @@
 import { By, Select } from "selenium-webdriver";
-import { should, expect } from "chai";
+import { expect } from "chai";
 import { sleep } from "../utils/sleep.js";
 
 export class ContactUsPage {
     constructor(driver) {
-        should();
-
         this.driver = driver;
         this.url = "https://www.telerik.com/contact";
         
@@ -28,7 +26,6 @@ export class ContactUsPage {
     async verifyPageTitle() {
         let contactUsPageTitle = await this.driver.getTitle();
 
-        contactUsPageTitle.should.equal("Contact the Telerik Team | Progress Telerik");
         expect(contactUsPageTitle).to.equal("Contact the Telerik Team | Progress Telerik");
     }
 

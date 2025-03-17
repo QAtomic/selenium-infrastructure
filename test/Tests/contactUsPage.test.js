@@ -1,5 +1,3 @@
-import { By, Select } from "selenium-webdriver";
-import { should } from "chai";
 import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
 import { ContactUsPage } from "../pages/contactUsPage.js";
