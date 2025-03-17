@@ -1,4 +1,3 @@
-import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
 import { PricingPage } from "../pages/pricingPage.js";
 
@@ -10,8 +9,6 @@ describe("Pricing Page", function() {
         this.pricingPage = new PricingPage(this.driver);
 
         await this.pricingPage.open();
-
-        await sleep(1000);
     });
 
     after(async function() {

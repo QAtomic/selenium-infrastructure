@@ -1,4 +1,3 @@
-import { sleep } from "../utils/sleep.js";
 import { DriverManager } from "../managers/driverManager.js";
 import { HomePage } from "../pages/homePage.js";
 import { ContactUsPage } from "../pages/contactUsPage.js";
@@ -16,8 +15,6 @@ describe("Home Page", function() {
         this.searchPage = new SearchPage(this.driver);
 
         await this.homePage.open();
-
-        await sleep(1000);
     });
 
     after(async function() {

@@ -28,8 +28,6 @@ export class SearchPage {
         
         //await this.driver.findElement(By.xpath("//tk-site-search//button")).click();
         //I did not submit this search because it is blocked by Captcha.
-
-        await sleep(1000);
     }
 
     async verifyFirstLinkText(str) {
