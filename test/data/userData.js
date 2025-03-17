@@ -1,10 +1,10 @@
 export const userData = [
     {
-        testCase : "Drew Form",
+        testCase : "Steve Form",
         helpYou : "Product questions",
         productInterst : "Test Studio",   
-        firstName : "Drew",
-        lastName : "Sorensen",
+        firstName : "Steve",
+        lastName : "Johnson",
         email : "automation@test.com",
         company : "Automation",
         country : "United States",
