@@ -21,10 +21,8 @@ export class PricingPage {
 
     async verifyProductPrice(product, price) {
         let displayedPrice = await this.driver.findElement(By.xpath("//div[@class='Purchase-title']/*[contains(text(),'" + product + "')]/../..//div[@class='Purchase-price']")).getText().then(function(value) {
-            return value
+            return value.replace(/[^0-9]/g, '').trim();
         });
-        
-        displayedPrice = displayedPrice.replace(/[^0-9]/g, '').trim();
                 
         expect(displayedPrice).to.equal(price);
                 
