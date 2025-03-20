@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 3,
-    "passes": 2,
+    "suites": 5,
+    "tests": 10,
+    "passes": 9,
     "pending": 0,
-    "failures": 8,
-    "start": "2025-03-20T21:45:38.146Z",
-    "end": "2025-03-20T21:45:38.977Z",
-    "duration": 831,
-    "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "failures": 1,
+    "start": "2025-03-20T21:56:06.802Z",
+    "end": "2025-03-20T21:56:21.207Z",
+    "duration": 14405,
+    "testsRegistered": 10,
+    "passPercent": 90,
     "pendingPercent": 0,
     "other": 1,
     "hasOther": true,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "48201a51-a540-4754-b613-f8eb14649416",
+      "uuid": "544fc634-370c-4228-9b72-52854a218c04",
       "title": "",
-      "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\functional\\tests\\sumFunction.test.js",
-      "file": "\\test\\functional\\tests\\sumFunction.test.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "60126a98-5a24-4c07-8ce2-d9564e9c2e4c",
+          "uuid": "0e7d56e9-146f-4ce4-96de-828d296873ae",
           "title": "Sum Function",
           "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\functional\\tests\\sumFunction.test.js",
           "file": "\\test\\functional\\tests\\sumFunction.test.js",
@@ -38,7 +38,7 @@
               "title": "Two Plus Three",
               "fullTitle": "Sum Function Two Plus Three",
               "timedOut": null,
-              "duration": 1,
+              "duration": 0,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,7 +47,7 @@
               "context": null,
               "code": "expect(sum(math.a, math.b)).to.equal(math.result);",
               "err": {},
-              "uuid": "79806bdf-a33c-4be8-8c4d-72d48af20d0c",
+              "uuid": "1dadce69-b9a5-45a3-b177-3a078568c517",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -65,7 +65,7 @@
               "context": null,
               "code": "expect(sum(math.a, math.b)).to.equal(math.result);",
               "err": {},
-              "uuid": "68023355-af32-47c1-956f-9e4b3ebde814",
+              "uuid": "9dc2b95c-797c-45b8-9908-3c2aa91ac960",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -87,7 +87,7 @@
                 "estack": "AssertionError: expected 13 to equal 12\n    at Context.<anonymous> (file:///C:/Users/Drew/Documents/VScode-workspace/selenium-infrastructure/test/functional/tests/sumFunction.test.js:11:44)\n    at process.processImmediate (node:internal/timers:478:21)",
                 "diff": "- 13\n+ 12\n"
               },
-              "uuid": "215cef32-a944-4e1d-a8f0-c0dc9f45af43",
+              "uuid": "3e9787d9-478a-4fe5-a104-603479eca8f9",
               "parentUUID": null,
               "isHook": false,
               "skipped": false
@@ -95,15 +95,361 @@
           ],
           "suites": [],
           "passes": [
-            "79806bdf-a33c-4be8-8c4d-72d48af20d0c",
-            "68023355-af32-47c1-956f-9e4b3ebde814"
+            "1dadce69-b9a5-45a3-b177-3a078568c517",
+            "9dc2b95c-797c-45b8-9908-3c2aa91ac960"
           ],
           "failures": [
-            "215cef32-a944-4e1d-a8f0-c0dc9f45af43"
+            "3e9787d9-478a-4fe5-a104-603479eca8f9"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 2,
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "742a82f0-18ad-4135-be62-31e1f3c4405d",
+          "title": "Pricing Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\ui\\tests\\pricingPage.test.js",
+          "file": "\\test\\ui\\tests\\pricingPage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Pricing Page\"",
+              "fullTitle": "Pricing Page \"before each\" hook in \"Pricing Page\"",
+              "timedOut": null,
+              "duration": 3715,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "this.driver = await (new DriverManager()).getDriver();\nthis.pricingPage = new PricingPage(this.driver);\nawait this.pricingPage.open();",
+              "err": {},
+              "uuid": "386c97e1-b2ad-4680-8514-7ecaddcc95f8",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Pricing Page\"",
+              "fullTitle": "Pricing Page \"after all\" hook in \"Pricing Page\"",
+              "timedOut": null,
+              "duration": 63,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await this.driver.quit();",
+              "err": {},
+              "uuid": "69a28bd7-b7ea-4843-a3ab-cb8fed45bd12",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "DevCraft Complete Pricing",
+              "fullTitle": "Pricing Page DevCraft Complete Pricing",
+              "timedOut": null,
+              "duration": 3106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.pricingPage.verifyProductPrice(\"DevCraft Complete\", \"1299\");",
+              "err": {},
+              "uuid": "ddf07274-689d-439f-b2f9-f410d1b5052f",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddf07274-689d-439f-b2f9-f410d1b5052f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3106,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "d915ef37-fc6b-4e0f-8c49-6e98d8131d0f",
+          "title": "Search Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\ui\\tests\\searchPage.test.js",
+          "file": "\\test\\ui\\tests\\searchPage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Search Page\"",
+              "fullTitle": "Search Page \"before each\" hook in \"Search Page\"",
+              "timedOut": null,
+              "duration": 5347,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "this.driver = await (new DriverManager()).getDriver();\nthis.searchPage = new SearchPage(this.driver);\nawait this.searchPage.open();",
+              "err": {},
+              "uuid": "0bc49f7e-5da8-4338-b2ac-8373911d2ba3",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Search Page\"",
+              "fullTitle": "Search Page \"after all\" hook in \"Search Page\"",
+              "timedOut": null,
+              "duration": 92,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await this.driver.quit();",
+              "err": {},
+              "uuid": "59a658b2-0a71-4749-87eb-da21349cad13",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Search DevCraft",
+              "fullTitle": "Search Page Search DevCraft",
+              "timedOut": null,
+              "duration": 2190,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.searchPage.search(\"DevCraft\");\nawait this.searchPage.verifyFirstLinkText(\"DevCraft\");",
+              "err": {},
+              "uuid": "391f124d-422b-43ea-909e-29af19881d11",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "391f124d-422b-43ea-909e-29af19881d11"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2190,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "36ecc245-307f-4bc9-b6a6-6a39741a7a53",
+          "title": "Home Page",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\ui\\tests\\homePage.test.js",
+          "file": "\\test\\ui\\tests\\homePage.test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Home Page\"",
+              "fullTitle": "Home Page \"before each\" hook in \"Home Page\"",
+              "timedOut": null,
+              "duration": 371,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "this.driver = await (new DriverManager()).getDriver();\n\nthis.homePage = new HomePage(this.driver);\nthis.contactUsPage = new ContactUsPage(this.driver);\nthis.pricingPage = new PricingPage(this.driver);\nthis.searchPage = new SearchPage(this.driver);\nawait this.homePage.open();",
+              "err": {},
+              "uuid": "bb1d9ad6-3c95-421a-b12a-13728aca04a9",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Home Page\"",
+              "fullTitle": "Home Page \"after all\" hook in \"Home Page\"",
+              "timedOut": null,
+              "duration": 60,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await this.driver.quit();",
+              "err": {},
+              "uuid": "07e1d663-f38c-4972-9e68-ba374597c42a",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Contact Us Link",
+              "fullTitle": "Home Page Contact Us Link",
+              "timedOut": null,
+              "duration": 2419,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.homePage.clickContactUsLink();\nawait this.contactUsPage.verifyPageTitle();",
+              "err": {},
+              "uuid": "b39c0ee0-fae0-4eff-aecf-03df0cfa6849",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Link",
+              "fullTitle": "Home Page Search Link",
+              "timedOut": null,
+              "duration": 1666,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.homePage.clickSearchLink();\nawait this.searchPage.verifyPageTitle();",
+              "err": {},
+              "uuid": "e7523375-84c1-4e1f-8c0c-daff0f0e6b61",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Pricing Link",
+              "fullTitle": "Home Page Pricing Link",
+              "timedOut": null,
+              "duration": 841,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await this.homePage.clickPricingLink();\nawait this.pricingPage.verifyPageTitle();",
+              "err": {},
+              "uuid": "3b5546d5-02bd-447e-93b8-a88053c81310",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b39c0ee0-fae0-4eff-aecf-03df0cfa6849",
+            "e7523375-84c1-4e1f-8c0c-daff0f0e6b61",
+            "3b5546d5-02bd-447e-93b8-a88053c81310"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4926,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "59faa26a-9912-4bea-97a7-0f808e583822",
+          "title": "Contact Us Form",
+          "fullFile": "C:\\Users\\Drew\\Documents\\VScode-workspace\\selenium-infrastructure\\test\\ui\\tests\\contactUsPage.test.js",
+          "file": "\\test\\ui\\tests\\contactUsPage.test.js",
+          "beforeHooks": [],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Contact Us Form\"",
+              "fullTitle": "Contact Us Form \"after all\" hook in \"Contact Us Form\"",
+              "timedOut": null,
+              "duration": 113,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": null,
+              "context": null,
+              "code": "await this.driver.quit();",
+              "err": {},
+              "uuid": "cfaf65d9-51fd-426e-b992-51f8a0896e7f",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Steve Form",
+              "fullTitle": "Contact Us Form Steve Form",
+              "timedOut": null,
+              "duration": 8801,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    this.driver = await (new DriverManager()).getDriver();\n    this.contactUsPage = new ContactUsPage(this.driver);\n    await this.contactUsPage.open();\n    \n    await this.contactUsPage.fillGetInTouchForm(user);\n} finally {};",
+              "err": {},
+              "uuid": "ee524d50-afa4-4498-88ca-2520c15c7877",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mike Form",
+              "fullTitle": "Contact Us Form Mike Form",
+              "timedOut": null,
+              "duration": 4493,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    this.driver = await (new DriverManager()).getDriver();\n    this.contactUsPage = new ContactUsPage(this.driver);\n    await this.contactUsPage.open();\n    \n    await this.contactUsPage.fillGetInTouchForm(user);\n} finally {};",
+              "err": {},
+              "uuid": "517cb3f6-2b79-42c6-9864-feb504a02adf",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee524d50-afa4-4498-88ca-2520c15c7877",
+            "517cb3f6-2b79-42c6-9864-feb504a02adf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13294,
           "root": false,
           "rootEmpty": false,
           "_timeout": null

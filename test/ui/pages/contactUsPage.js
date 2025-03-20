@@ -1,6 +1,6 @@
 import { By, Select } from "selenium-webdriver";
 import { expect } from "chai";
-import { sleep } from "../utils/sleep.js";
+import { sleep } from "../../utils/sleep.js";
 
 export class ContactUsPage {
     constructor(driver) {

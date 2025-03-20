@@ -1,6 +1,6 @@
 import { By } from "selenium-webdriver";
 import { expect } from "chai";
-import { sleep } from "../utils/sleep.js";
+import { sleep } from "../../utils/sleep.js";
 
 export class PricingPage {
     constructor(driver) {
