@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "mocha --no-timeouts --parallel test/tests/*.js --reporter mochawesome --require mochawesome/register --reporter-options reportDir=test/reports/lastRun,reportFilename=Test_Report"
+    "test": "mocha --no-timeouts --parallel test/**/*.js --reporter mochawesome --require mochawesome/register --reporter-options reportDir=test/reports/lastRun,reportFilename=Test_Report"
   },
   "dependencies": {
     "chai": "^5.2.0",

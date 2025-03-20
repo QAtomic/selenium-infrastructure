@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { sum } from "../../src/functions/sum.js";
+import { sum } from "../../../src/functions/sum.js";
 import { mathData } from "../data/mathData.js";
 
 

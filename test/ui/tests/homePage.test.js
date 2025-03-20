@@ -1,4 +1,4 @@
-import { DriverManager } from "../managers/driverManager.js";
+import { DriverManager } from "../../managers/driverManager.js";
 import { HomePage } from "../pages/homePage.js";
 import { ContactUsPage } from "../pages/contactUsPage.js";
 import { PricingPage } from "../pages/pricingPage.js";
